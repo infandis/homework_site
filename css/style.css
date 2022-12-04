@@ -1,48 +1,123 @@
-.wrapper { 
-    width: 92%; /*1330*/
+@import url("../fonts/GraphikLCG-Regular.ttf?family=GraphikLCG:100,100i,200,200i,300,400&display=swap");
+@import url("../fonts/GraphikLCG-Semibold.ttf?family=GraphikLCG:500,600,700&display=swap");
+
+body {
+    font-family: "GraphikLCG", sans-serif;
+}
+
+.wrapper {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90%; /*1290*/
     margin: 0 auto;
 }
+
+/* COMMON */
 
 .btn,
 .integrate__link,
 .try__link {
-        display: inline-block;
-        padding: 20px 41px;
-        background: #FF6336;
-        transition: all .5s;
-        text-decoration: none;
-        color: #ffffff;
-    }
+    display: inline-block;
+    padding: 20px 42px;
+    transition: all .5s;
+    text-decoration: none;
+}
+
+.btn,
+.integrate__link,
+.try__link,
+.start__title,
+.company__title,
+.main__title,
+.main__link,
+.case__link,
+.team__item-title,
+.info__title,
+.team__title,
+.info__item-title,
+.awards__text,
+.integrate__title,
+.try__title,
+.case__title,
+.case__title-primary {
+    font-weight: 600;
+}
+
+.paragraph__link,
+.main__link,
+.team__item-link,
+.case__link,
+.info__link,
+.menu__link {
+    color: black; 
+}
+
+.main__link:hover,
+.paragraph__link:hover,
+.team__item-link:hover,
+.case__link:hover,
+.info__link:hover,
+.menu__link:hover {
+    color: #FF6336;
+    transition: all .5s;
+}
+
+.btn--primary,
+.integrate__link {
+    background: #FF6336;
+    color: #ffffff;
+}
+
+.btn--secondary {
+    color: #000000; 
+    border: 1px solid #a39f9f;
+}
     
-    .btn:hover,
-    .integrate__link:hover,
-    .try__link:hover { /* чтобы цвет кнопки менялся при наведении */
-        background: brown;
-        transition: all .5s; /* но делал это плавно */
-    }
+.btn:hover,
+.integrate__link:hover,
+.try__link:hover { /* чтобы цвет кнопки менялся при наведении */
+    background: brown;
+    transition: all .5s; /* но делал это плавно */
+}
 
 /*HEADER*/
+.header {
+    border-bottom: 1px solid #bbb7b7;
+}
+
+.header__wrapper {
+    height: 95px;
+    width: 93%; /* 1338 */
+    margin: 0 auto;
+}
+
 .header__wrapper,
 .menu {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__item {
+    display: flex;
 }
 
 .menu__item,
 .header__btn-wrap {
-    margin-left: 10%;
+    margin-left: 13%;
     white-space: nowrap;
 }
 
+.menu__link {
+    text-decoration: none;
+}
+
 .header__btn {
-    padding: 10%;
+    margin-left: 4%;
 }
 
 /*START*/
-.wrapper { 
-    display:flex;
-}
-
 .start__item {
     width: 43%;
 }
@@ -52,14 +127,22 @@
     margin-top: 129px;
     margin-bottom: 51px;
     font-size: 4rem;
-    font-weight: 600;
-
 }
 
 .start__text {
-    width: 85%;
+    width: 75%;
     font-size: 1.6rem;
+    margin-bottom: 50px;
 }
+
+.start__btn-wrap {
+    margin-bottom: 25px;
+}
+
+.start__btn {
+    margin-right: 1%; 
+}
+
 .start__img-wrap {
     width: 57%;
     margin-top: 151px;
@@ -74,7 +157,6 @@
 .company__title {
     width: 50%;
     font-size: 3.1rem;
-    font-weight: 600;
     padding-top:  108px;
     margin-top: 182px;
     margin-bottom: 82px;
@@ -89,52 +171,43 @@
 
 /*MAIN*/
 
-.wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
 .main__item {
-    width: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
     margin-top: 90px;
     margin-bottom: 160px;
 }
 
+.main__text {
+    width: 40%;
+}
+
 .main__title {
-    width: 52%;
+    width: 80%;
     font-size: 3.1rem;
-    font-weight: 600;
-    margin-bottom: 33px;
     margin-top: 160px;
+}
+
+.main__title,
+.main__paragraph {
+    margin-bottom: 30px;
 }
 
 .main__paragraph {
     width: 78%;
     font-size: 1.25rem;
     font-weight: 400;
-    margin-bottom: 30px;
+}
+
+.main__img {
+    width: 49%;
 }
 
 .main__link,
 .case__link {
     font-size: 1.25rem;
-    font-weight: 600;
     text-decoration: none;
-}
-
-.paragraph__link,
-.main__link,
-.team__item-link,
-.case__link {
-    color: black; 
-}
-
-.main__link:hover,
-.paragraph__link:hover,
-.team__item-link:hover,
-.case__link:hover {
-    color: #FF6336;
-    transition: .5s;
 }
 
 /*INFO*/ /*TEAM*/
@@ -145,7 +218,6 @@
 .info__title,
 .team__title {
     font-size: 3rem;
-    font-weight: 600;
     margin-top: 120px;
     margin-bottom: 79px;
 }
@@ -162,30 +234,35 @@
    margin-bottom: 147px;
 }
 
+.info__item-title {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
 .team__item {
     width: 30%;
     margin-bottom: 217px;
 }
 
-.info__item-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-}
-
-.team__item-img {
-    height: 50%;
-    margin-bottom: 67px;
-}
-
 .team__item-title {
     font-size: 1.9rem;
-    font-weight: 600;
     margin-bottom: 34px;
 }
 
-.team__item-text {
-    margin-bottom: 25px;
+.team__item-first {
+    margin-top: 49px;
+}
+
+.team__item-second {
+    margin-top: 84px;
+}
+
+.team__item-third {
+    margin-top: 66px;
+}
+
+.team__item-paragraph {
+    margin-bottom: 25px; 
 }
 
 /* ABOUT */
@@ -208,6 +285,7 @@
    font-size: 1.9rem; 
    margin-bottom: 23px;
 }
+
  /* AWARDS*/
 .awards {
     background-color: #DABC98;
@@ -217,7 +295,6 @@
 .awards__text {
     width: 34%;
     font-size: 2.1rem;
-    font-weight: 600;
 } 
 
 /* INTEGRATE */
@@ -230,10 +307,9 @@
 }
 
 .integrate__title,
-.try__title { /*width?*/
+.try__title { 
     margin-top: 165px;
     font-size: 4rem;
-    font-weight: 600;
     width: 50%;
 }
 
@@ -268,37 +344,42 @@
 .try__link {
     background-color: black;
     margin-bottom: 161px;
+    color: #ffffff;
 }
 
 /* CASE */
 .case {
-    display: flex;
-    flex-wrap: wrap;
     padding-top: 97px;
     padding-bottom: 95px;
 }
 
+.case,
+.case__item-wrap {
+    display: flex;
+    justify-content: space-between;
+}
 
+.case__item-primary {
+    width: 23%;
+    margin-right: 60px;
+}
 .case__title-primary {
     font-size: 2.5rem; 
-    font-weight: 600;
     margin-bottom: 29px;
 }
 
-.logo {
-    width: 20%;
-}
-
 .case__text-primary {
-    width: 55%;
     font-size: 1.25rem;
     margin-bottom: 15px;
+}
+
+.case__item-wrap {
+    width: 65%;
 }
 
 .case__title {
     margin-bottom: 21px;
     font-size: 1.25rem;
-    font-weight: 600;
 }
 
 li {
@@ -321,7 +402,6 @@ li {
     background-color: #EEEEEE;
 }
 
-
 .footer {
     display: flex;
     justify-content: space-between;
@@ -337,7 +417,6 @@ li {
 
 .footer__img {
     margin-right: 3.5%;
-
 }
 
 
